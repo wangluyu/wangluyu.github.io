@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="nginx一个很有用但是经常被错误使用的特性之一就是**限速[rate limiting]**。它可以帮你限制在一段时间内的http请求数。 基本限速配置限速配置主要依靠两个指令，limit_req_zone 和 limit_req 123456789101112http &#123;  ...  limit_req_zone $binary_remote_addr zone&#x3D;mylimit:10">
+  <meta name="description" content="仅 Mock 部分方法 Mockito.mockStatic 时传入 Mockito.CALLS_REAL_METHODS，适用于需要测试的静态方法与Mock的静态方法在同一个类的情况。 123456789101112131415161718192021222324252627public class A &#123;  public static int mockFunc(int flag) &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx 限速">
-<meta property="og:url" content="http://example.com/Nginx-%E9%99%90%E9%80%9F/index.html">
+<meta property="og:title" content="使用 Junit5 与 Mockito 编写 Java 单元测试">
+<meta property="og:url" content="http://example.com/%E4%BD%BF%E7%94%A8-Junit5-%E4%B8%8E-Mockito-%E7%BC%96%E5%86%99-Java-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.html">
 <meta property="og:site_name" content="WWW">
-<meta property="og:description" content="nginx一个很有用但是经常被错误使用的特性之一就是**限速[rate limiting]**。它可以帮你限制在一段时间内的http请求数。 基本限速配置限速配置主要依靠两个指令，limit_req_zone 和 limit_req 123456789101112http &#123;  ...  limit_req_zone $binary_remote_addr zone&#x3D;mylimit:10">
+<meta property="og:description" content="仅 Mock 部分方法 Mockito.mockStatic 时传入 Mockito.CALLS_REAL_METHODS，适用于需要测试的静态方法与Mock的静态方法在同一个类的情况。 123456789101112131415161718192021222324252627public class A &#123;  public static int mockFunc(int flag) &amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-29T07:27:20.000Z">
-<meta property="article:modified_time" content="2024-01-29T07:41:54.254Z">
+<meta property="article:published_time" content="2024-01-29T07:40:35.000Z">
+<meta property="article:modified_time" content="2024-01-29T11:35:54.553Z">
 <meta property="article:author" content="Wang Luyu">
-<meta property="article:tag" content="Nginx">
-<meta property="article:tag" content="限速">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="单元测试">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/Nginx-%E9%99%90%E9%80%9F/">
+<link rel="canonical" href="http://example.com/%E4%BD%BF%E7%94%A8-Junit5-%E4%B8%8E-Mockito-%E7%BC%96%E5%86%99-Java-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>Nginx 限速 | WWW</title>
+  <title>使用 Junit5 与 Mockito 编写 Java 单元测试 | WWW</title>
   
 
 
@@ -168,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Nginx-%E9%99%90%E9%80%9F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E4%BD%BF%E7%94%A8-Junit5-%E4%B8%8E-Mockito-%E7%BC%96%E5%86%99-Java-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Nginx 限速
+          使用 Junit5 与 Mockito 编写 Java 单元测试
         </h1>
 
         <div class="post-meta">
@@ -192,7 +192,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-01-29 15:27:20 / 修改时间：15:41:54" itemprop="dateCreated datePublished" datetime="2024-01-29T15:27:20+08:00">2024-01-29</time>
+              <time title="创建时间：2024-01-29 15:40:35 / 修改时间：19:35:54" itemprop="dateCreated datePublished" datetime="2024-01-29T15:40:35+08:00">2024-01-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,7 +204,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
+                  <a href="/categories/%E5%BC%80%E5%8F%91/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
                 </span>
             </span>
 
@@ -219,34 +219,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>nginx一个很有用但是经常被错误使用的特性之一就是**限速[rate limiting]**。它可以帮你限制在一段时间内的http请求数。</p>
-<h4 id="基本限速配置"><a href="#基本限速配置" class="headerlink" title="基本限速配置"></a>基本限速配置</h4><p>限速配置主要依靠两个指令，<code>limit_req_zone</code> 和 <code>limit_req</code></p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="attribute">limit_req_zone</span> <span class="variable">$binary_remote_addr</span> zone=mylimit:<span class="number">10m</span> rate=10r/s;</span><br><span class="line"> </span><br><span class="line">  <span class="section">server</span> &#123;</span><br><span class="line">      <span class="section">location</span> /login/ &#123;</span><br><span class="line">          <span class="attribute">limit_req</span> zone=mylimit;</span><br><span class="line">					...</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>limit_req_zone</code> 指令最好是定义在http块内，以便用于多个上下文。<code>limit_req_zone</code> 定义了三个参数，下面对该指令进行详解。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">limit_req_zone</span> key zone rate;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><strong>key</strong> </p>
-<ul>
-<li><code>ngx_http_limit_req_module</code> 模块根据key来对请求进行限速。例子中的key为<code>$binary_remote_addr</code> [客户端IP的二进制]，则表示同一个ip请求速率为10r&#x2F;s[第三个参数rate]。key可以是其他的参数，如果要对接口限速，可以使用<code>$uri</code>；如果要对某个参数进行限速，可以使用<code>$arg_xxx</code>[xxx为参数名]。</li>
-</ul>
-</li>
-<li><p><strong>zone</strong></p>
-<ul>
-<li><code>zone</code>定义了储存key状态的区域名称以及大小。该信息储存在共享内存中，所以它可以在每个nginx进程中共享。<code>zone</code>包含两部分，区域名称以及区域内存大小，它们之间用冒号<code>：</code>连接，例子中的<code>zone=mylimit:10m</code>表示定义了一个10M字节的mylimit区域。储存16,000个ip地址的状态信息大约需要1M字节，因此mylimit区域可以储存160,000个信息。</li>
-<li>如果nginx在区域内添加新key状态时，内存空间已耗尽，则会删除最久未使用的key。如果删除后空间仍旧不足，nginx则会返回503状态码[可修改，后面会提及]。因此，为了防止内存空间耗尽，nginx在每添加一个新key时会最多删除两个在过去60秒内都无请求的key。</li>
-</ul>
-</li>
-<li><p><strong>rate</strong></p>
-<ul>
-<li><code>rate</code>定义了每个key的最大请求速率。在🌰例子中<code>rate=10r/s</code>表示1秒内最多处理10个请求，即每100ms才会处理一个请求。因此，如果两个请求间的时差如果小于100ms，后一个请求则会返回503。</li>
-</ul>
-</li>
-</ul>
-<p><code>limit_req_zone</code> 指令只是对限速进行了定义，实际上并没有限速的功能。因此我们需要配合<code>limit_req</code>指令一起使用。<code>limit_req</code>需要定义在location块中，该指令也有三个参数，上面的例子只列举了一个参数<code>zone</code>，用于指定使用哪个限速速率。在上面的例子中，我们对&#x2F;login&#x2F;进行了限速，因此同一个ip的两个请求时差不能小于100ms。</p>
-<h4 id="burst配置"><a href="#burst配置" class="headerlink" title="burst配置"></a>burst配置</h4><p>但实际上，严格规定同一个key每100ms只接收一个请求是很不合理的，我们有时候需要在100ms内处理多个请求。<code>limit_req</code> 指令的第二个参数可以解决这个问题。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">limit_req</span> zone=mylimit burst=<span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+        <p>仅 Mock 部分方法</p>
+<p>Mockito.mockStatic 时传入 Mockito.CALLS_REAL_METHODS，适用于需要测试的静态方法与Mock的静态方法在同一个类的情况。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">mockFunc</span><span class="params">(<span class="type">int</span> flag)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> flag;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">testFunc</span><span class="params">(<span class="type">int</span> flag)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> mockFunc(flag) == <span class="number">1</span> ? <span class="string">&quot;true&quot;</span> : <span class="string">&quot;false&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ATest</span> &#123;</span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">testFunc</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> (MockedStatic&lt;A&gt; AMockedStatic = Mockito.mockStatic(A.class)) &#123;</span><br><span class="line">      AMockedStatic.when(() -&gt; A.mockFunc(<span class="number">1</span>)).thenReturn(<span class="number">1</span>);</span><br><span class="line">      assertEquals(<span class="string">&quot;true&quot;</span>, A.testFunc(<span class="number">1</span>)); <span class="comment">// 测试不通过，因为A类被mock，此时testFunc返回的是null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">testFunc2</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> (MockedStatic&lt;A&gt; AMockedStatic = Mockito.mockStatic(A.class, Mockito.CALLS_REAL_METHODS)) &#123;</span><br><span class="line">      AMockedStatic.when(() -&gt; A.mockFunc(<span class="number">1</span>)).thenReturn(<span class="number">1</span>);</span><br><span class="line">      assertEquals(<span class="string">&quot;true&quot;</span>, A.testFunc(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -257,8 +232,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
-              <a href="/tags/%E9%99%90%E9%80%9F/" rel="tag"># 限速</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" rel="tag"># 单元测试</a>
           </div>
 
         
@@ -266,10 +241,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/%E4%BD%BF%E7%94%A8-Junit5-%E4%B8%8E-Mockito-%E7%BC%96%E5%86%99-Java-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" rel="next" title="使用 Junit5 与 Mockito 编写 Java 单元测试">
-      使用 Junit5 与 Mockito 编写 Java 单元测试 <i class="fa fa-chevron-right"></i>
+    <a href="/Nginx-%E9%99%90%E9%80%9F/" rel="prev" title="Nginx 限速">
+      <i class="fa fa-chevron-left"></i> Nginx 限速
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E5%B8%B8%E7%94%A8%E7%9A%84-Linux-%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/" rel="next" title="常用的 Linux 命令 (文件篇)">
+      常用的 Linux 命令 (文件篇) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -329,7 +307,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%99%90%E9%80%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">基本限速配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#burst%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">burst配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

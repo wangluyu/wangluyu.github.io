@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="WWW">
-<meta property="og:url" content="http://example.com/archives/2024/01/index.html">
+  <meta name="description" content="在 access log 记录请求头内容在 log_format 处加上 $http_请求头名，其中请求头名中的-换成_  如：想要在 access log 记录请求头Content-Type 的值，则在 log_format 加上 $http_content_type  在 access log 记录响应头内容在 log_format 处加上 $sent_http_响应头名，其中响应头名中的-换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx 日志记录请求头&#x2F;响应头">
+<meta property="og:url" content="http://example.com/Nginx-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E8%AF%B7%E6%B1%82%E5%A4%B4-%E5%93%8D%E5%BA%94%E5%A4%B4/index.html">
 <meta property="og:site_name" content="WWW">
+<meta property="og:description" content="在 access log 记录请求头内容在 log_format 处加上 $http_请求头名，其中请求头名中的-换成_  如：想要在 access log 记录请求头Content-Type 的值，则在 log_format 加上 $http_content_type  在 access log 记录响应头内容在 log_format 处加上 $sent_http_响应头名，其中响应头名中的-换">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-21T06:54:12.000Z">
+<meta property="article:modified_time" content="2024-02-21T11:30:52.623Z">
 <meta property="article:author" content="Wang Luyu">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="日志">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2024/01/">
+<link rel="canonical" href="http://example.com/Nginx-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E8%AF%B7%E6%B1%82%E5%A4%B4-%E5%93%8D%E5%BA%94%E5%A4%B4/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | WWW</title>
+  <title>Nginx 日志记录请求头/响应头 | WWW</title>
   
 
 
@@ -155,70 +161,101 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Nginx-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E8%AF%B7%E6%B1%82%E5%A4%B4-%E5%93%8D%E5%BA%94%E5%A4%B4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wang Luyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WWW">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Nginx 日志记录请求头/响应头
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-02-21 14:54:12 / 修改时间：19:30:52" itemprop="dateCreated datePublished" datetime="2024-02-21T14:54:12+08:00">2024-02-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-01-29T15:40:35+08:00"
-              content="2024-01-29">
-          01-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E4%BD%BF%E7%94%A8-Junit5-%E4%B8%8E-Mockito-%E7%BC%96%E5%86%99-Java-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" itemprop="url">
-            <span itemprop="name">使用 Junit5 与 Mockito 编写 Java 单元测试</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-01-29T15:27:20+08:00"
-              content="2024-01-29">
-          01-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/Nginx-%E9%99%90%E9%80%9F/" itemprop="url">
-            <span itemprop="name">Nginx 限速</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h2 id="在-access-log-记录请求头内容"><a href="#在-access-log-记录请求头内容" class="headerlink" title="在 access log 记录请求头内容"></a>在 access log 记录请求头内容</h2><p>在 log_format 处加上 <code>$http_请求头名</code>，其中<code>请求头名</code>中的<code>-</code>换成<code>_</code></p>
+<blockquote>
+<p>如：想要在 access log 记录请求头<code>Content-Type</code> 的值，则在 log_format 加上 <code>$http_content_type</code></p>
+</blockquote>
+<h2 id="在-access-log-记录响应头内容"><a href="#在-access-log-记录响应头内容" class="headerlink" title="在 access log 记录响应头内容"></a>在 access log 记录响应头内容</h2><p>在 log_format 处加上 <code>$sent_http_响应头名</code>，其中<code>响应头名</code>中的<code>-</code>换成<code>_</code></p>
+<blockquote>
+<p>如：想要在 access log 记录响应头<code>Accept-Encoding</code> 的值，则在 log_format 加上 <code>$sent_http_accept_encoding</code></p>
+</blockquote>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+              <a href="/tags/%E6%97%A5%E5%BF%97/" rel="tag"># 日志</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E5%B8%B8%E7%94%A8%E7%9A%84-Linux-%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/" rel="prev" title="常用的 Linux 命令 (文件篇)">
+      <i class="fa fa-chevron-left"></i> 常用的 Linux 命令 (文件篇)
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -271,6 +308,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8-access-log-%E8%AE%B0%E5%BD%95%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">在 access log 记录请求头内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8-access-log-%E8%AE%B0%E5%BD%95%E5%93%8D%E5%BA%94%E5%A4%B4%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">在 access log 记录响应头内容</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
