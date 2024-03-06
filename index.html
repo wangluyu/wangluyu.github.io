@@ -257,7 +257,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-03-06 16:42:55 / 修改时间：20:43:53" itemprop="dateCreated datePublished" datetime="2024-03-06T16:42:55+08:00">2024-03-06</time>
+              <time title="创建时间：2024-03-06 16:42:55 / 修改时间：21:00:57" itemprop="dateCreated datePublished" datetime="2024-03-06T16:42:55+08:00">2024-03-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -286,7 +286,7 @@
       
           <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Systemd 可以管理所有系统资源，不同的资源统称为 Unit。Systemd Unit 分为系统 unit（system）和用户 unit（user）。系统 unit 为开机不登陆就能运行的程序，常用于开机自启，其配置文件目录在<code>/usr/lib/systemd/system/</code>(Centos7)。用户 unit 为需要登陆以后才能运行的程序，其配置文件目录在<code>/usr/lib/systemd/user/</code>(Centos7)。</p>
 <p>Unit 文件统一了过去各种不同系统资源配置格式，例如服务的启&#x2F;停、定时任务、设备自动挂载、网络配置、虚拟内存配置等。而 Systemd 通过不同的文件后缀来区分这些配置文件。其中最常见的是<code>.service</code>后缀文件，它用于封装守护进程的启动、停止、重启和重载操作。我们自定义的服务就是使用<code>.service</code>后缀文件，因此接下来介绍的都是<code>.service</code>后缀文件。</p>
-<p><img src="/Users/wangluyu/wangluyu/blog/public/images/article/Centos7%E4%BD%BFsystemctl%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A101.png" alt="/usr/lib/systemd目录下文件列表"></p>
+<p><img src="/images/image-20240306210030795.png" alt="image-20240306210030795"></p>
 <h3 id="添加新服务"><a href="#添加新服务" class="headerlink" title="添加新服务"></a>添加新服务</h3><ol>
 <li><p>切换到<code>root</code>用户或具有<code>sudo</code>权限的用户。</p>
 </li>
