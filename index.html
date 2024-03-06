@@ -161,6 +161,77 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Linux-%E6%97%A5%E5%BF%97%E5%B7%A5%E5%85%B7-logrotate-%E8%AF%A6%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wang Luyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WWW">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Linux-%E6%97%A5%E5%BF%97%E5%B7%A5%E5%85%B7-logrotate-%E8%AF%A6%E8%A7%A3/" class="post-title-link" itemprop="url">Linux 日志工具 logrotate 详解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-03-06 20:51:46 / 修改时间：20:52:13" itemprop="dateCreated datePublished" datetime="2024-03-06T20:51:46+08:00">2024-03-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/systemctl-%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -393,7 +464,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-03-06 16:25:47 / 修改时间：16:44:45" itemprop="dateCreated datePublished" datetime="2024-03-06T16:25:47+08:00">2024-03-06</time>
+              <time title="创建时间：2024-03-06 16:25:47 / 修改时间：20:47:01" itemprop="dateCreated datePublished" datetime="2024-03-06T16:25:47+08:00">2024-03-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -420,7 +491,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="使用-systemctl-管理-Nginx"><a href="#使用-systemctl-管理-Nginx" class="headerlink" title="使用 systemctl 管理 Nginx"></a>使用 systemctl 管理 Nginx</h2>
+          <h2 id="使用-systemctl-管理-Nginx"><a href="#使用-systemctl-管理-Nginx" class="headerlink" title="使用 systemctl 管理 Nginx"></a>使用 systemctl 管理 Nginx</h2><p>nginx.service 配置示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=The OpenResty Application Platform</span><br><span class="line">After=syslog.target network-online.target remote-fs.target nss-lookup.target</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">EnvironmentFile=-/usr/local/etc/nginx/environment</span><br><span class="line">ExecStartPre=-/usr/bin/mkdir /data/logs/nginx/cache -p</span><br><span class="line">ExecStartPre=/usr/local/openresty/nginx/sbin/nginx -t -c /usr/local/etc/nginx/nginx.conf</span><br><span class="line">ExecStart=/usr/local/openresty/nginx/sbin/nginx -c /usr/local/etc/nginx/nginx.conf</span><br><span class="line">ExecReload=/bin/kill -s HUP <span class="variable">$MAINPID</span></span><br><span class="line">ExecStop=/bin/kill -s QUIT <span class="variable">$MAINPID</span></span><br><span class="line">PrivateTmp=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-logrotate-切割日志"><a href="#使用-logrotate-切割日志" class="headerlink" title="使用 logrotate 切割日志"></a>使用 logrotate 切割日志</h2><p>logrotate 配置示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/data/logs/nginx/access.log /data/logs/nginx/error.log &#123;</span><br><span class="line">    rotate 2</span><br><span class="line">    missingok</span><br><span class="line">    notifempty</span><br><span class="line">    create 644 work work</span><br><span class="line">    dateext</span><br><span class="line">    dateformat .%Y%m%d%H.%s</span><br><span class="line">    sharedscripts</span><br><span class="line">    postrotate</span><br><span class="line">        /bin/kill -s USR1 $(systemctl show --property MainPID nginx | <span class="built_in">cut</span> -d<span class="string">&quot;=&quot;</span> -f2)</span><br><span class="line">    endscript</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -1013,7 +1090,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
